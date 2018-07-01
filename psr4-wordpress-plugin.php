@@ -1,19 +1,19 @@
 <?php
 /**
- * Plugin Name: Sample Plugin
+ * Plugin Name: PSR4 WordPress Plugin
  * Description: A Sample WordPress Plugin with autoload and PHP namespace
  * Plugin URI:  https://veronalabs.com
  * Version:     1.0
  * Author:      Mostafa Soufi
- * Author URI:  https://mostafa-soufi.ir
+ * Author URI:  https://soufi.me
  * License:     MIT
- * Text Domain: sample-plugin
+ * Text Domain: psr4-wordpress-plugin
  * Domain Path: /languages
  */
 
-add_action('plugins_loaded', array(Sample_Plugin::get_instance(), 'plugin_setup'));
+add_action('plugins_loaded', array(PSR4_WordPress_Plugin::get_instance(), 'plugin_setup'));
 
-class Sample_Plugin
+class PSR4_WordPress_Plugin
 {
     /**
      * Plugin instance.
@@ -59,11 +59,12 @@ class Sample_Plugin
     {
         $this->plugin_url = plugins_url('/', __FILE__);
         $this->plugin_path = plugin_dir_path(__FILE__);
-        $this->load_language('sample-plugin');
+        $this->load_language('psr4-wordpress-plugin');
 
         spl_autoload_register(array($this, 'autoload'));
 
-        $obj = new Test\MyClass();
+        // Example: Modify the Contents
+        Actions\Post::addEmojiToContents();
     }
 
     /**
