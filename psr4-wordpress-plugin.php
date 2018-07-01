@@ -52,7 +52,6 @@ class PSR4_WordPress_Plugin
      * Used for regular plugin work.
      *
      * @wp-hook plugins_loaded
-     * @since   2012.09.10
      * @return  void
      */
     public function plugin_setup()
@@ -71,7 +70,6 @@ class PSR4_WordPress_Plugin
      * Constructor. Intentionally left empty and public.
      *
      * @see plugin_setup()
-     * @since 2012.09.12
      */
     public function __construct()
     {
@@ -85,7 +83,6 @@ class PSR4_WordPress_Plugin
      *
      * @wp-hook init
      * @param   string $domain
-     * @since   2012.09.11
      * @return  void
      */
     public function load_language($domain)
