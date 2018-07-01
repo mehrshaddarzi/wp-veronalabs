@@ -11,7 +11,7 @@ to place files that will be autoloaded according to the specification.
 In the below you can see the folder structure and classes:
   
 ```bash
-/includes
+includes
     ├── Folder
     │   └── Test.php
     └── Folder2
@@ -19,14 +19,12 @@ In the below you can see the folder structure and classes:
 ```
 The example of the `Test.php`
 ```
-<?php
-
 namespace Folder;
 
 class Test
 {
     /**
-     * @return mixed
+     * @return string
      */
     public static function getHelloWorld()
     {
@@ -36,6 +34,5 @@ class Test
 ```
 And you can run above class in your code with below command:
 ```
-<?php
 echo Folder\Test::getHelloWorld();
 ```
