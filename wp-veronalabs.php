@@ -1,13 +1,13 @@
 <?php
 /**
- * Plugin Name: PSR4 WordPress Plugin
- * Description: A Sample WordPress Plugin with autoload and PHP namespace
+ * Plugin Name: Wp VeronaLabs Test
+ * Description: A Sample WordPress Plugin For Test My Skill in wordpress developer 
  * Plugin URI:  https://veronalabs.com
  * Version:     1.0
- * Author:      Mostafa Soufi
- * Author URI:  https://soufi.me
+ * Author:      Mehrshad Darzi
+ * Author URI:  https://realwp.net
  * License:     MIT
- * Text Domain: psr4-wordpress-plugin
+ * Text Domain: wp-veronalabs
  * Domain Path: /languages
  */
 
