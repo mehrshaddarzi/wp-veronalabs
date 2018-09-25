@@ -11,9 +11,9 @@
  * Domain Path: /languages
  */
 
-add_action('plugins_loaded', array(PSR4_WordPress_Plugin::get_instance(), 'plugin_setup'));
+add_action('plugins_loaded', array(WP_VERONALABS_TEST::get_instance(), 'plugin_setup'));
 
-class PSR4_WordPress_Plugin
+class WP_VERONALABS_TEST
 {
     /**
      * Plugin instance.
