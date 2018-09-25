@@ -29,7 +29,6 @@ class Core
     }
 
 
-
     function Set_Screen_option($status, $option, $value) {
         if ( 'isbn_per_page' == $option ) return $value;
         return $status;
@@ -68,9 +67,9 @@ class Core
 <div id="post-body" class="metabox-holder columns">
 <div>
 <div class="meta-box-sortables ui-sortable">
-    <form id="nds-user-list-form" method="get">
-        <input type="hidden" name="page" value="<?php echo $_REQUEST['page'] ?>" />
-        <input type="hidden" name="post_type" value="book" />
+<form id="nds-user-list-form" method="get">
+<input type="hidden" name="page" value="<?php echo $_REQUEST['page'] ?>" />
+<input type="hidden" name="post_type" value="book" />
 <?php
 $wp_list_table = new ISBN_Table();
 $wp_list_table->prepare_items();

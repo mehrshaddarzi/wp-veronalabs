@@ -96,6 +96,11 @@ class WP_VERONALABS_TEST
          */
         $this->admin_action();
 
+        /*
+        * Public Action Load
+        */
+        $this->public_action();
+
     }
 
     /*
@@ -112,6 +117,13 @@ class WP_VERONALABS_TEST
         $sql = "CREATE TABLE $table_name (`id` bigint(45) NOT NULL AUTO_INCREMENT,`post_id` bigint(45) NOT NULL,`isbn` varchar(100) NOT NULL ,PRIMARY KEY  (id)) {$charset_collate};";
         require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
         dbDelta( $sql );
+
+        /*
+         * Register Flush Rewrite Accept
+         */
+        if ( ! get_option( 'wp_veronalabs_flush' ) ) {
+            add_option( 'wp_veronalabs_flush', true );
+        }
 
     }
 
@@ -155,12 +167,17 @@ class WP_VERONALABS_TEST
 
 
         /*
+         * Flush Rewrite in Not finding Post Type
+         */
+        add_action( 'init', [$this, 'flush_rewrite'] , 999 );
+
+
+        /*
          * Set Screen Option
          */
         if( $pagenow =="edit.php" and $_GET['post_type'] =="book" and $_GET['page'] =="isbn_book") {
             add_filter('set-screen-option', [Admin\ISBN\Core::get(), 'Set_Screen_option'], 10, 3);
         }
-
 
     }
 
@@ -172,6 +189,32 @@ class WP_VERONALABS_TEST
     {
         $hook = add_submenu_page( 'edit.php?post_type=book',__("ISBN List", self::text_doamin),__("ISBN List", self::text_doamin),'manage_options', 'isbn_book' ,[Admin\ISBN\Core::get(), 'ShowPage_ISBN']);
         add_action( "load-$hook", [Admin\ISBN\Core::get(), 'Screen_option'] );
+    }
+
+
+    /*
+     * Public Action Wordpress
+     */
+    public function public_action()
+    {
+
+        /*
+         * Add Shortcode Book Component
+         */
+        add_shortcode( 'booksearch', [ \Front\ShortCode::get() , 'Search_Component' ] );
+
+    }
+
+
+    /*
+     * Flush Rewrite
+     */
+    public function flush_rewrite()
+    {
+            if ( get_option( 'wp_veronalabs_flush' ) ) {
+                flush_rewrite_rules();
+                delete_option( 'wp_veronalabs_flush' );
+            }
     }
 
 

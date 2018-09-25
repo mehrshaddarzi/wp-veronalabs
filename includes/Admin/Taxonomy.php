@@ -43,7 +43,7 @@ class Taxonomy
         $args = array(
             'labels' => $labels,
             'hierarchical' => true,
-            'rewrite'   => array( 'slug' => 'book/author' ),
+            'rewrite'   => array( 'slug' => 'authors' ),
             'query_var'    => true,
             'update_count_callback' => '_update_post_term_count',
         );
@@ -69,7 +69,7 @@ class Taxonomy
         $args = array(
             'labels' => $labels,
             'hierarchical' => true,
-            'rewrite'   => array( 'slug' => 'book/publisher' ),
+            'rewrite'   => array( 'slug' => 'publishers' ),
             'query_var'    => true,
             'update_count_callback' => '_update_post_term_count',
         );
