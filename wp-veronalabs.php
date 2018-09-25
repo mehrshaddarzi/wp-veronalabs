@@ -19,7 +19,7 @@ add_action('plugins_loaded', array(WP_VERONALABS_TEST::get_instance(), 'plugin_s
 /*
  * Register Activation Hook
  */
-register_activation_hook(__FILE__, array( WP_VERONALABS_TEST::get_instance(), 'activate') );
+register_activation_hook(__FILE__, ['WP_VERONALABS_TEST' , 'activate'] );
 
 
 class WP_VERONALABS_TEST
@@ -31,18 +31,29 @@ class WP_VERONALABS_TEST
      * @type object
      */
     protected static $instance = NULL;
+
+
     /**
      * URL to this plugin's directory.
      *
      * @type string
      */
     public $plugin_url = '';
+
     /**
      * Path to this plugin's directory.
      *
      * @type string
      */
     public $plugin_path = '';
+
+
+    /**
+     * TextDomain Name Plugin
+     *
+     * @type string
+     */
+    const text_doamin = 'wp-veronalabs';
 
     /**
      * Access this plugin’s working instance
@@ -53,7 +64,8 @@ class WP_VERONALABS_TEST
      */
     public static function get_instance()
     {
-        NULL === self::$instance and self::$instance = new self;
+        if ( NULL === self::$instance )
+            self::$instance = new self;
         return self::$instance;
     }
 
@@ -72,12 +84,17 @@ class WP_VERONALABS_TEST
         /*
          * Set Text Domain
          */
-        $this->load_language('wp-veronalabs');
+        $this->load_language($this->text_domain);
 
         /*
          * PSR Autoload
          */
         spl_autoload_register(array($this, 'autoload'));
+
+        /*
+         * Admin Action Load
+         */
+        $this->admin_action();
 
     }
 
@@ -98,6 +115,48 @@ class WP_VERONALABS_TEST
 
     }
 
+
+    /*
+     * List Admin Action Wordpress
+     */
+    public function admin_action()
+    {
+
+        /*
+         * Create Book Post Type
+         */
+        add_action( 'init', [\Admin\PostType::get(), 'create_book_post_type'] );
+
+
+        /*
+         * Add Taxonomies For Book
+         */
+        add_action( 'init', [\Admin\Taxonomy::get(), 'Create_taxonomy_book'] );
+
+
+        /*
+         * New MetaBox For Book PostType
+         */
+        add_action( 'add_meta_boxes', [\Admin\MetaBox::get(), 'Create_Meta_box'] );
+        add_action( 'save_post_book', [\Admin\MetaBox::get(), 'Save_MetaBox'] , 10, 2 );
+
+        /*
+         * AddMenu ISBN Page
+         */
+        add_action('admin_menu', [$this, 'add_submenu_isbn']);
+
+    }
+
+
+    /*
+     * Add Isbn Menu
+     */
+    public function add_submenu_isbn()
+    {
+        add_submenu_page( 'edit.php?post_type=book',__("ISBN List", self::text_doamin),__("ISBN List", self::text_doamin),'manage_options', 'isbn_book' ,[Admin\ISBN\Core::get(), 'ShowPage_ISBN']);
+    }
+
+
     /**
      * Constructor. Intentionally left empty and public.
      *
@@ -106,6 +165,7 @@ class WP_VERONALABS_TEST
     public function __construct()
     {
     }
+
 
     /**
      * Loads translation file.

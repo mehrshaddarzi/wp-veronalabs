@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Wp VeronaLabs Test\n"
-"POT-Creation-Date: 2018-09-25 13:20+0330\n"
-"PO-Revision-Date: 2018-09-25 13:21+0330\n"
+"POT-Creation-Date: 2018-09-25 13:22+0330\n"
+"PO-Revision-Date: 2018-09-25 17:06+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -31,8 +31,7 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid "A Sample WordPress Plugin For Test My Skill in wordpress developer"
-msgstr ""
-"این یک افزونه هست برای نمایش مهارت در توسعه وردپرس به شرکت veronalabs"
+msgstr "این یک افزونه هست برای نمایش مهارت در توسعه وردپرس به شرکت veronalabs"
 
 #. Author of the plugin/theme
 msgid "Mehrshad Darzi"
