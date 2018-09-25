@@ -98,7 +98,6 @@ class WP_VERONALABS_TEST
 
     }
 
-
     /**
      * Constructor. Intentionally left empty and public.
      *
