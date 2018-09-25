@@ -23,12 +23,11 @@ class PostType
      */
     public function create_book_post_type()
     {
-
         $t_d = \WP_VERONALABS_TEST::text_doamin;
         $labels = array(
             'name' => __( 'Book', $t_d),
             'singular_name' => __( 'Book',  $t_d ),
-            'add_new' => _x( 'New Book', $t_d ),
+            'add_new' => __( 'New Book', $t_d ),
             'add_new_item' => __( 'Add New Book', $t_d ),
             'edit_item' => __( 'Edit Book', $t_d ),
             'new_item' => __( 'New Book', $t_d ),
@@ -37,7 +36,7 @@ class PostType
             'search_items' => __( 'Search in Books', $t_d ),
             'not_found' => __( 'Not found Any Book', $t_d ),
             'not_found_in_trash' => __( 'Not found any Book in Trash', $t_d ),
-            'parent_item_colon'  => __( 'Parent Books: ', 'your-plugin-textdomain' ),
+            'parent_item_colon'  => __( 'Parent Books', $t_d ),
             'menu_name' => __( 'Books List', $t_d ),
         );
         $args = array(
@@ -73,6 +72,73 @@ class PostType
         register_post_type( 'book', $args );
 
         
+    }
+    
+    
+    /*
+     * Column Table Post List
+     */
+    public function column_post_table($column, $post_id)
+    {
+        global $wpdb;
+        /*
+         * Isbb
+         */
+        if ($column == 'isbn'){
+            $isbn = $wpdb->get_var("SELECT `isbn` FROM `{$wpdb->prefix}books_info` WHERE `post_id` = {$post_id}");
+            if(trim($isbn) !="")  { echo $isbn; } else { echo '-'; }
+        }
+
+
+        /*
+         * Book Authors List
+         */
+        if ($column == 'book_author'){
+            echo $this->show_list_term_of_postid($post_id, 'authors');
+        }
+
+
+        /*
+        * Book Publisher List
+        */
+        if ($column == 'book_publisher'){
+            echo $this->show_list_term_of_postid($post_id, 'Publisher');
+        }
+    }
+
+
+    /*
+     * Show List Of Term From Post
+     */
+    public function show_list_term_of_postid($post_id, $term)
+    {
+        $text = '';
+        $list = wp_get_post_terms( $post_id, $term  );
+        if(count($list) ==0) {
+            $text = "-";
+        } else {
+            $i = 1;
+            foreach($list as $term) {
+                $text .= '<a href="'.get_term_link( $term ).'" target="_blank">'.$term->name.'</a>';
+                if($i !=count($list)) { $text .= ' , '; }
+                $i++;
+            }
+        }
+
+        return $text;
+    }
+    
+    
+    /*
+     * Column Book Table Add
+     */
+    public function column_book($columns)
+    {
+        $t_d = \WP_VERONALABS_TEST::text_doamin;
+        $columns['isbn'] = __("ISBN", $t_d);
+        $columns['book_author'] = __("Authors Book", $t_d);
+        $columns['book_publisher'] = __("Publisher Book", $t_d);
+        return $columns;
     }
 
 }

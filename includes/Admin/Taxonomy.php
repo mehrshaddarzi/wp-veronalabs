@@ -1,7 +1,6 @@
 <?php
 namespace Admin;
 
-
 class Taxonomy
 {
 

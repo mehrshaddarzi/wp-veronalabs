@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Wp VeronaLabs Test\n"
-"POT-Creation-Date: 2018-09-25 13:22+0330\n"
-"PO-Revision-Date: 2018-09-25 17:06+0330\n"
+"POT-Creation-Date: 2018-09-25 22:28+0330\n"
+"PO-Revision-Date: 2018-09-25 22:28+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -16,10 +16,209 @@ msgstr ""
 "X-Poedit-WPHeader: wp-veronalabs.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
-"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: includes/Admin/ISBN/Core.php:37
+msgid "ISBN Per Page"
+msgstr "تعداد شابک در هر صفحه"
+
+#: includes/Admin/ISBN/Core.php:55 wp-veronalabs.php:200
+msgid "ISBN List"
+msgstr "لیست شابک"
+
+#: includes/Admin/ISBN/Core.php:66
+msgid "Search ISBN"
+msgstr "جستجو شابک"
+
+#: includes/Admin/ISBN/ISBN_Table.php:26 includes/Admin/ISBN/ISBN_Table.php:172
+#: includes/Admin/PostType.php:138 includes/Front/ShortCode.php:76
+msgid "ISBN"
+msgstr "شابک"
+
+#: includes/Admin/ISBN/ISBN_Table.php:27
+msgid "ISBN Lists"
+msgstr "لیست شابک ها"
+
+#: includes/Admin/ISBN/ISBN_Table.php:108
+#, fuzzy
+#| msgid "No ISBN avaliable."
+msgid "No ISBN avaliable"
+msgstr "هیچ کد شابک در درسترس نیست"
+
+#: includes/Admin/ISBN/ISBN_Table.php:145
+msgid "Delete This ISBN"
+msgstr "حذف این شابک"
+
+#: includes/Admin/ISBN/ISBN_Table.php:157
+msgid "View Post"
+msgstr "نمایش محتوا کتاب"
+
+#: includes/Admin/ISBN/ISBN_Table.php:171 includes/Front/ShortCode.php:75
+msgid "Book Name"
+msgstr "نام کتاب"
+
+#: includes/Admin/ISBN/ISBN_Table.php:254
+msgid "You are Not Allow"
+msgstr "شما اجازه این کار را ندارید"
+
+#: includes/Admin/MetaBox.php:24
+msgid "ISBN Book"
+msgstr "شابک کتاب"
+
+#: includes/Admin/MetaBox.php:43
+msgid "ISBN Number"
+msgstr "کد شابک"
+
+#: includes/Admin/PostType.php:28 includes/Admin/PostType.php:29
+msgid "Book"
+msgstr "کتاب"
+
+#: includes/Admin/PostType.php:31
+msgid "Add New Book"
+msgstr "افزودن کتاب جدید"
+
+#: includes/Admin/PostType.php:32
+msgid "Edit Book"
+msgstr "ویرایش کتاب"
+
+#: includes/Admin/PostType.php:33
+msgid "New Book"
+msgstr "کتاب جدید"
+
+#: includes/Admin/PostType.php:34
+msgid "All Books"
+msgstr "همه کتاب ها"
+
+#: includes/Admin/PostType.php:35
+msgid "Show Book"
+msgstr "نمایش کتاب"
+
+#: includes/Admin/PostType.php:36 includes/Front/ShortCode.php:49
+msgid "Search in Books"
+msgstr "جستجو در کتاب ها"
+
+#: includes/Admin/PostType.php:37
+msgid "Not found Any Book"
+msgstr "هیچ کتابی یافت نشد"
+
+#: includes/Admin/PostType.php:38
+msgid "Not found any Book in Trash"
+msgstr "هیچ کتابی در سطل آشغال یافت نشد"
+
+#: includes/Admin/PostType.php:39
+msgid "Parent Books"
+msgstr "کتاب پدر"
+
+#: includes/Admin/PostType.php:40 includes/Admin/PostType.php:44
+msgid "Books List"
+msgstr "لیست کتاب ها"
+
+#: includes/Admin/PostType.php:139 includes/Front/ShortCode.php:77
+msgid "Authors Book"
+msgstr "نویسندگان کتاب"
+
+#: includes/Admin/PostType.php:140 includes/Front/ShortCode.php:78
+msgid "Publisher Book"
+msgstr "ناشرین کتاب"
+
+#: includes/Admin/Taxonomy.php:30
+msgid "Author"
+msgstr "نویسنده"
+
+#: includes/Admin/Taxonomy.php:31
+msgid "Author List"
+msgstr "لیست نویسنده"
+
+#: includes/Admin/Taxonomy.php:32
+msgid "Search in Authors"
+msgstr "جستجو در نویسندگان"
+
+#: includes/Admin/Taxonomy.php:33
+msgid "All Authors"
+msgstr "تمامی نویسندگان"
+
+#: includes/Admin/Taxonomy.php:34
+msgid "The Author Parent"
+msgstr "نویسنده مادر"
+
+#: includes/Admin/Taxonomy.php:35
+msgid "Current Author"
+msgstr "نویسنده کنونی"
+
+#: includes/Admin/Taxonomy.php:36
+msgid "Edit Author"
+msgstr "ویرایش نویسنده"
+
+#: includes/Admin/Taxonomy.php:37
+msgid "Update Author"
+msgstr "بروزرسانی نویسنده"
+
+#: includes/Admin/Taxonomy.php:38
+msgid "Add New Author"
+msgstr "افزودن نویسنده جدید"
+
+#: includes/Admin/Taxonomy.php:39
+msgid "New Author"
+msgstr "نویسنده جدید"
+
+#: includes/Admin/Taxonomy.php:40
+msgid "Authors List"
+msgstr "لیست نویسندگان"
+
+#: includes/Admin/Taxonomy.php:56
+msgid "Publisher"
+msgstr "ناشر"
+
+#: includes/Admin/Taxonomy.php:57 includes/Admin/Taxonomy.php:66
+msgid "Publisher List"
+msgstr "لیست ناشرین"
+
+#: includes/Admin/Taxonomy.php:58
+msgid "Search in Publisher"
+msgstr "جستجو در ناشرین"
+
+#: includes/Admin/Taxonomy.php:59
+msgid "All Publisher"
+msgstr "تمامی ناشرین"
+
+#: includes/Admin/Taxonomy.php:60
+msgid "The Publisher Parent"
+msgstr "ناشر مادر"
+
+#: includes/Admin/Taxonomy.php:61
+msgid "Current Publisher"
+msgstr "ناشر کنونی"
+
+#: includes/Admin/Taxonomy.php:62
+msgid "Edit Publisher"
+msgstr "ویرایش ناشر"
+
+#: includes/Admin/Taxonomy.php:63
+msgid "Update Publisher"
+msgstr "بروز رسانی ناشر"
+
+#: includes/Admin/Taxonomy.php:64
+msgid "Add New Publisher"
+msgstr "افزودن ناشر جدید"
+
+#: includes/Admin/Taxonomy.php:65
+msgid "New Publisher"
+msgstr "ناشر جدید"
+
+#: includes/Front/ShortCode.php:40
+msgid "Book ISBN"
+msgstr "شابک کتاب"
+
+#: includes/Front/ShortCode.php:44
+msgid "Please Enter ISBN Book Number"
+msgstr "لطفا کد شابک کتاب را وارد نمایید"
+
+#: includes/Front/ShortCode.php:96
+msgid "No books found with this ISBN"
+msgstr "هیچ کتابی با این کد شابک یافت نشد"
 
 #. Plugin Name of the plugin/theme
 msgid "Wp VeronaLabs Test"
@@ -40,3 +239,6 @@ msgstr "مهرشاد درزی"
 #. Author URI of the plugin/theme
 msgid "https://realwp.net"
 msgstr ""
+
+#~ msgid "df"
+#~ msgstr "مهرشاد دز"

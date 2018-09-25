@@ -1,7 +1,6 @@
 <?php
 namespace Admin\ISBN;
 
-
 class Core
 {
     // Get instance
@@ -9,12 +8,6 @@ class Core
 
     // Isbn WP_List_Table object
     public $isbn_obj;
-
-
-    public function __construct()
-    {
-
-    }
 
 
     /**
@@ -54,12 +47,9 @@ class Core
     public function ShowPage_ISBN()
     {
 
-
-
         /*
          * Show Ui List Table Page
          */
-
 ?>
 <div class="wrap">
 <h2><?php echo __("ISBN List", \WP_VERONALABS_TEST::text_doamin); ?> </h2>
@@ -84,7 +74,6 @@ $wp_list_table->display();
 </div>
 </div>
 <?php
-
     }
 
 }

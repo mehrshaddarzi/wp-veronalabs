@@ -25,7 +25,6 @@ class MetaBox
     }
 
 
-
     public function isbn_metabox()
     {
         global $post, $wpdb;

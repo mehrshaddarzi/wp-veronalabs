@@ -21,6 +21,11 @@ add_action('plugins_loaded', array(WP_VERONALABS_TEST::get_instance(), 'plugin_s
  */
 register_activation_hook(__FILE__, ['WP_VERONALABS_TEST' , 'activate'] );
 
+function myplugin_load_textdomain() {
+
+}
+
+
 
 class WP_VERONALABS_TEST
 {
@@ -84,7 +89,8 @@ class WP_VERONALABS_TEST
         /*
          * Set Text Domain
          */
-        $this->load_language($this->text_domain);
+
+        $this->load_language(self::text_doamin);
 
         /*
          * PSR Autoload
@@ -159,18 +165,22 @@ class WP_VERONALABS_TEST
          */
         add_action( 'before_delete_post', [\Admin\MetaBox::get(), 'Remove_ISBN_Row'] );
 
+        /*
+         * Add Column Book PosType Table
+         */
+        add_action( 'manage_posts_custom_column' , [\Admin\PostType::get(), 'column_post_table'] , 10, 2 );
+        add_filter('manage_book_posts_columns' , [\Admin\PostType::get(), 'column_book']);
+
 
         /*
          * AddMenu ISBN Page
          */
         add_action('admin_menu', [$this, 'add_submenu_isbn']);
 
-
         /*
          * Flush Rewrite in Not finding Post Type
          */
         add_action( 'init', [$this, 'flush_rewrite'] , 999 );
-
 
         /*
          * Set Screen Option
@@ -211,8 +221,16 @@ class WP_VERONALABS_TEST
      */
     public function flush_rewrite()
     {
+
             if ( get_option( 'wp_veronalabs_flush' ) ) {
+                /*
+                 * Flush Rewrite
+                 */
                 flush_rewrite_rules();
+
+                /*
+                 * Remove Option
+                 */
                 delete_option( 'wp_veronalabs_flush' );
             }
     }
@@ -223,9 +241,7 @@ class WP_VERONALABS_TEST
      *
      * @see plugin_setup()
      */
-    public function __construct()
-    {
-    }
+    public function __construct(){}
 
 
     /**
@@ -240,7 +256,7 @@ class WP_VERONALABS_TEST
      */
     public function load_language($domain)
     {
-        load_plugin_textdomain($domain, FALSE, $this->plugin_path . '/languages');
+        load_plugin_textdomain( $domain, false, basename( dirname( __FILE__ ) ) . '/languages' );
     }
 
     /**
