@@ -11,7 +11,16 @@
  * Domain Path: /languages
  */
 
+/*
+ * Plugin Loaded Action
+ */
 add_action('plugins_loaded', array(WP_VERONALABS_TEST::get_instance(), 'plugin_setup'));
+
+/*
+ * Register Activation Hook
+ */
+register_activation_hook(__FILE__, array( WP_VERONALABS_TEST::get_instance(), 'activate') );
+
 
 class WP_VERONALABS_TEST
 {
@@ -56,15 +65,39 @@ class WP_VERONALABS_TEST
      */
     public function plugin_setup()
     {
+
         $this->plugin_url = plugins_url('/', __FILE__);
         $this->plugin_path = plugin_dir_path(__FILE__);
-        $this->load_language('psr4-wordpress-plugin');
 
+        /*
+         * Set Text Domain
+         */
+        $this->load_language('wp-veronalabs');
+
+        /*
+         * PSR Autoload
+         */
         spl_autoload_register(array($this, 'autoload'));
 
-        // Example: Modify the Contents
-        Actions\Post::addEmojiToContents();
     }
+
+    /*
+     * Activation Hook
+     */
+    public static function activate() {
+        global $wpdb;
+
+        /*
+         * Create Base Table in mysql
+         */
+        $charset_collate = $wpdb->get_charset_collate();
+        $table_name = $wpdb->prefix.'books_info';
+        $sql = "CREATE TABLE $table_name (`id` bigint(45) NOT NULL AUTO_INCREMENT,`post_id` bigint(45) NOT NULL,`isbn` varchar(100) NOT NULL ,PRIMARY KEY  (id)) {$charset_collate};";
+        require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+        dbDelta( $sql );
+
+    }
+
 
     /**
      * Constructor. Intentionally left empty and public.
