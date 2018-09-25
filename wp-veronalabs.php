@@ -121,6 +121,7 @@ class WP_VERONALABS_TEST
      */
     public function admin_action()
     {
+        global $pagenow;
 
         /*
          * Create Book Post Type
@@ -140,10 +141,26 @@ class WP_VERONALABS_TEST
         add_action( 'add_meta_boxes', [\Admin\MetaBox::get(), 'Create_Meta_box'] );
         add_action( 'save_post_book', [\Admin\MetaBox::get(), 'Save_MetaBox'] , 10, 2 );
 
+
+        /*
+         * Remove Isbn From Table in Complete Deleting Post
+         */
+        add_action( 'before_delete_post', [\Admin\MetaBox::get(), 'Remove_ISBN_Row'] );
+
+
         /*
          * AddMenu ISBN Page
          */
         add_action('admin_menu', [$this, 'add_submenu_isbn']);
+
+
+        /*
+         * Set Screen Option
+         */
+        if( $pagenow =="edit.php" and $_GET['post_type'] =="book" and $_GET['page'] =="isbn_book") {
+            add_filter('set-screen-option', [Admin\ISBN\Core::get(), 'Set_Screen_option'], 10, 3);
+        }
+
 
     }
 
@@ -153,7 +170,8 @@ class WP_VERONALABS_TEST
      */
     public function add_submenu_isbn()
     {
-        add_submenu_page( 'edit.php?post_type=book',__("ISBN List", self::text_doamin),__("ISBN List", self::text_doamin),'manage_options', 'isbn_book' ,[Admin\ISBN\Core::get(), 'ShowPage_ISBN']);
+        $hook = add_submenu_page( 'edit.php?post_type=book',__("ISBN List", self::text_doamin),__("ISBN List", self::text_doamin),'manage_options', 'isbn_book' ,[Admin\ISBN\Core::get(), 'ShowPage_ISBN']);
+        add_action( "load-$hook", [Admin\ISBN\Core::get(), 'Screen_option'] );
     }
 
 

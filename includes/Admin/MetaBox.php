@@ -100,6 +100,17 @@ class MetaBox
         }
 
     }
-
+    
+    
+    /*
+     * Remove ISBN in Deleting Complete post
+     */
+    public function Remove_ISBN_Row( $postid  )
+    {
+        global $wpdb, $post_type;
+        if ( $post_type == 'book' ) {
+            $wpdb->query($wpdb->prepare("DELETE FROM {$wpdb->prefix}books_info WHERE post_id = %d", $postid));
+        }
+    }
 
 }
