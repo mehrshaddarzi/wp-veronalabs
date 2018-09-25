@@ -21,11 +21,6 @@ add_action('plugins_loaded', array(WP_VERONALABS_TEST::get_instance(), 'plugin_s
  */
 register_activation_hook(__FILE__, ['WP_VERONALABS_TEST' , 'activate'] );
 
-function myplugin_load_textdomain() {
-
-}
-
-
 
 class WP_VERONALABS_TEST
 {

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Wp VeronaLabs Test\n"
-"POT-Creation-Date: 2018-09-25 22:28+0330\n"
-"PO-Revision-Date: 2018-09-25 22:28+0330\n"
+"POT-Creation-Date: 2018-09-25 22:31+0330\n"
+"PO-Revision-Date: 2018-09-25 22:31+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -25,7 +25,7 @@ msgstr ""
 msgid "ISBN Per Page"
 msgstr "تعداد شابک در هر صفحه"
 
-#: includes/Admin/ISBN/Core.php:55 wp-veronalabs.php:200
+#: includes/Admin/ISBN/Core.php:55 wp-veronalabs.php:195
 msgid "ISBN List"
 msgstr "لیست شابک"
 
@@ -76,6 +76,10 @@ msgstr "کد شابک"
 msgid "Book"
 msgstr "کتاب"
 
+#: includes/Admin/PostType.php:30 includes/Admin/PostType.php:33
+msgid "New Book"
+msgstr "کتاب جدید"
+
 #: includes/Admin/PostType.php:31
 msgid "Add New Book"
 msgstr "افزودن کتاب جدید"
@@ -83,10 +87,6 @@ msgstr "افزودن کتاب جدید"
 #: includes/Admin/PostType.php:32
 msgid "Edit Book"
 msgstr "ویرایش کتاب"
-
-#: includes/Admin/PostType.php:33
-msgid "New Book"
-msgstr "کتاب جدید"
 
 #: includes/Admin/PostType.php:34
 msgid "All Books"
