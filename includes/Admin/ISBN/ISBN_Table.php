@@ -141,7 +141,7 @@ class ISBN_Table extends \WP_List_Table
     /*
      * Show Column ISBN Number
      */
-    function column_ISBN( $item ) {
+    function column_isbn( $item ) {
         return $item['isbn'];
     }
 
