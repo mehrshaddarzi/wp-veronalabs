@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Wp VeronaLabs Test\n"
-"POT-Creation-Date: 2018-09-26 10:11+0330\n"
-"PO-Revision-Date: 2018-09-26 10:11+0330\n"
+"POT-Creation-Date: 2018-09-26 10:46+0330\n"
+"PO-Revision-Date: 2018-09-26 10:46+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -33,7 +33,7 @@ msgstr "لیست شابک"
 msgid "Search ISBN"
 msgstr "جستجو شابک"
 
-#: includes/Admin/ISBN/ISBN_Table.php:26 includes/Admin/ISBN/ISBN_Table.php:171
+#: includes/Admin/ISBN/ISBN_Table.php:26 includes/Admin/ISBN/ISBN_Table.php:170
 #: includes/Admin/PostType.php:125 includes/Front/ShortCode.php:76
 msgid "ISBN"
 msgstr "شابک"
@@ -46,20 +46,20 @@ msgstr "لیست شابک ها"
 msgid "no isbn available"
 msgstr "هیچ کد شابک در درسترس نیست"
 
-#: includes/Admin/ISBN/ISBN_Table.php:144
+#: includes/Admin/ISBN/ISBN_Table.php:143
 msgid "Delete This ISBN"
 msgstr "حذف این شابک"
 
-#: includes/Admin/ISBN/ISBN_Table.php:156
+#: includes/Admin/ISBN/ISBN_Table.php:155
 msgid "View Post"
 msgstr "نمایش محتوا کتاب"
 
-#: includes/Admin/ISBN/ISBN_Table.php:170 includes/Admin/PostType.php:133
+#: includes/Admin/ISBN/ISBN_Table.php:169 includes/Admin/PostType.php:133
 #: includes/Front/ShortCode.php:75
 msgid "Book Name"
 msgstr "نام کتاب"
 
-#: includes/Admin/ISBN/ISBN_Table.php:253
+#: includes/Admin/ISBN/ISBN_Table.php:252
 msgid "You are Not Allow"
 msgstr "شما اجازه این کار را ندارید"
 

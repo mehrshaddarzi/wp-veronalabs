@@ -131,11 +131,10 @@ class ISBN_Table extends \WP_List_Table
      * @param array $item
      *
      * @return string
-     */
     function column_cb( $item ) {
         return sprintf('<input type="checkbox" name="bulk-delete[]" value="%s" />', $item['id']);
     }
-
+    */
 
     function column_bookname( $item ) {
 
@@ -166,7 +165,7 @@ class ISBN_Table extends \WP_List_Table
 
         $t_b = \WP_VERONALABS_TEST::text_doamin;
         $columns = [
-            'cb'      => '<input type="checkbox" />',
+            /* Nothig Action for This Table 'cb' => '<input type="checkbox" />', */
             'bookname'    => __( "Book Name" , $t_b ),
             'isbn'    => __( 'ISBN', $t_b ),
             'view'    => '',
