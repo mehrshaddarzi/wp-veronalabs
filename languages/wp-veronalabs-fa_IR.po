@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Wp VeronaLabs Test\n"
-"POT-Creation-Date: 2018-09-26 09:49+0330\n"
-"PO-Revision-Date: 2018-09-26 09:49+0330\n"
+"POT-Creation-Date: 2018-09-26 09:57+0330\n"
+"PO-Revision-Date: 2018-09-26 09:58+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -34,7 +34,7 @@ msgid "Search ISBN"
 msgstr "جستجو شابک"
 
 #: includes/Admin/ISBN/ISBN_Table.php:26 includes/Admin/ISBN/ISBN_Table.php:171
-#: includes/Admin/PostType.php:138 includes/Front/ShortCode.php:76
+#: includes/Admin/PostType.php:123 includes/Front/ShortCode.php:76
 msgid "ISBN"
 msgstr "شابک"
 
@@ -114,17 +114,9 @@ msgstr "کتاب پدر"
 msgid "Books List"
 msgstr "لیست کتاب ها"
 
-#: includes/Admin/PostType.php:139 includes/Front/ShortCode.php:77
-msgid "Authors Book"
-msgstr "نویسندگان کتاب"
-
-#: includes/Admin/PostType.php:140 includes/Front/ShortCode.php:78
-msgid "Publisher Book"
-msgstr "ناشرین کتاب"
-
 #: includes/Admin/Taxonomy.php:30
-msgid "Author"
-msgstr "نویسنده"
+msgid "Author Book"
+msgstr "نویسنده کتاب"
 
 #: includes/Admin/Taxonomy.php:31
 msgid "Author List"
@@ -170,43 +162,43 @@ msgstr "نویسنده جدید"
 msgid "Authors List"
 msgstr "لیست نویسندگان"
 
-#: includes/Admin/Taxonomy.php:59
+#: includes/Admin/Taxonomy.php:61
 msgid "Publisher"
 msgstr "ناشر"
 
-#: includes/Admin/Taxonomy.php:60 includes/Admin/Taxonomy.php:69
+#: includes/Admin/Taxonomy.php:62 includes/Admin/Taxonomy.php:71
 msgid "Publisher List"
 msgstr "لیست ناشرین"
 
-#: includes/Admin/Taxonomy.php:61
+#: includes/Admin/Taxonomy.php:63
 msgid "Search in Publisher"
 msgstr "جستجو در ناشرین"
 
-#: includes/Admin/Taxonomy.php:62
+#: includes/Admin/Taxonomy.php:64
 msgid "All Publisher"
 msgstr "تمامی ناشرین"
 
-#: includes/Admin/Taxonomy.php:63
+#: includes/Admin/Taxonomy.php:65
 msgid "The Publisher Parent"
 msgstr "ناشر مادر"
 
-#: includes/Admin/Taxonomy.php:64
+#: includes/Admin/Taxonomy.php:66
 msgid "Current Publisher"
 msgstr "ناشر کنونی"
 
-#: includes/Admin/Taxonomy.php:65
+#: includes/Admin/Taxonomy.php:67
 msgid "Edit Publisher"
 msgstr "ویرایش ناشر"
 
-#: includes/Admin/Taxonomy.php:66
+#: includes/Admin/Taxonomy.php:68
 msgid "Update Publisher"
 msgstr "بروز رسانی ناشر"
 
-#: includes/Admin/Taxonomy.php:67
+#: includes/Admin/Taxonomy.php:69
 msgid "Add New Publisher"
 msgstr "افزودن ناشر جدید"
 
-#: includes/Admin/Taxonomy.php:68
+#: includes/Admin/Taxonomy.php:70
 msgid "New Publisher"
 msgstr "ناشر جدید"
 
@@ -217,6 +209,14 @@ msgstr "شابک کتاب"
 #: includes/Front/ShortCode.php:44
 msgid "Please Enter ISBN Book Number"
 msgstr "لطفا کد شابک کتاب را وارد نمایید"
+
+#: includes/Front/ShortCode.php:77
+msgid "Authors Book"
+msgstr "نویسندگان کتاب"
+
+#: includes/Front/ShortCode.php:78
+msgid "Publisher Book"
+msgstr "ناشرین کتاب"
 
 #: includes/Front/ShortCode.php:96
 msgid "No books found with this ISBN"
@@ -241,6 +241,9 @@ msgstr "مهرشاد درزی"
 #. Author URI of the plugin/theme
 msgid "https://realwp.net"
 msgstr ""
+
+#~ msgid "Author"
+#~ msgstr "نویسنده کتاب"
 
 #~ msgid "The Author Parent"
 #~ msgstr "نویسنده مادر"

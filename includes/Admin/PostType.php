@@ -89,21 +89,6 @@ class PostType
             if(trim($isbn) !="")  { echo $isbn; } else { echo '-'; }
         }
 
-
-        /*
-         * Book Authors List
-         */
-        if ($column == 'book_author'){
-            echo $this->show_list_term_of_postid($post_id, 'authors');
-        }
-
-
-        /*
-        * Book Publisher List
-        */
-        if ($column == 'book_publisher'){
-            echo $this->show_list_term_of_postid($post_id, 'Publisher');
-        }
     }
 
 
@@ -136,8 +121,6 @@ class PostType
     {
         $t_d = \WP_VERONALABS_TEST::text_doamin;
         $columns['isbn'] = __("ISBN", $t_d);
-        $columns['book_author'] = __("Authors Book", $t_d);
-        $columns['book_publisher'] = __("Publisher Book", $t_d);
         return $columns;
     }
 

@@ -27,7 +27,7 @@ class Taxonomy
          * Authors Taxonomy
          */
         $labels = array(
-            'name' =>  __( 'Author', $t_d),
+            'name' =>  __( 'Author Book', $t_d),
             'singular_name' => __( 'Author List', $t_d),
             'search_items' => __( 'Search in Authors', $t_d),
             'all_items' => __( 'All Authors', $t_d),
@@ -47,6 +47,8 @@ class Taxonomy
             'hierarchical' => false, //Authors is not Parent Item
             'rewrite'   => array( 'slug' => 'authors' ),
             'query_var'    => true,
+            'show_ui'               => true,
+            'show_admin_column'     => true,
             'update_count_callback' => '_update_post_term_count',
         );
         register_taxonomy( 'authors', \WP_VERONALABS_TEST::post_type, $args );
@@ -73,6 +75,8 @@ class Taxonomy
             'hierarchical' => true,
             'rewrite'   => array( 'slug' => 'publishers' ),
             'query_var'    => true,
+            'show_ui'               => true,
+            'show_admin_column'     => true,
             'update_count_callback' => '_update_post_term_count',
         );
         register_taxonomy( 'Publisher', \WP_VERONALABS_TEST::post_type, $args );
