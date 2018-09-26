@@ -125,17 +125,9 @@ class ISBN_Table extends \WP_List_Table
         }
     }
 
-    /**
-     * Render the bulk edit checkbox
-     *
-     * @param array $item
-     *
-     * @return string
-    function column_cb( $item ) {
-        return sprintf('<input type="checkbox" name="bulk-delete[]" value="%s" />', $item['id']);
-    }
-    */
-
+    /*
+     * Show Column Book Name
+     */
     function column_bookname( $item ) {
 
         $delete_nonce = wp_create_nonce( 'sp_delete_isbn' );
@@ -146,11 +138,17 @@ class ISBN_Table extends \WP_List_Table
 
     }
 
+    /*
+     * Show Column ISBN Number
+     */
     function column_ISBN( $item ) {
         return $item['isbn'];
     }
 
 
+    /*
+     * Show Column Link view Post
+     */
     function column_view( $item ) {
         return '<a href="'.get_the_permalink($item['post_id']).'" target="_blank">'.__("View Post", \WP_VERONALABS_TEST::text_doamin).'</a>';
     }
