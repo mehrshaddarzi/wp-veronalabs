@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Wp VeronaLabs Test\n"
-"POT-Creation-Date: 2018-09-26 09:38+0330\n"
-"PO-Revision-Date: 2018-09-26 09:38+0330\n"
+"POT-Creation-Date: 2018-09-26 09:46+0330\n"
+"PO-Revision-Date: 2018-09-26 09:47+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -139,62 +139,70 @@ msgid "All Authors"
 msgstr "تمامی نویسندگان"
 
 #: includes/Admin/Taxonomy.php:36
+msgid "Separate Author with commas"
+msgstr "لطفا نویسندگان را با کاما , جدا کنید"
+
+#: includes/Admin/Taxonomy.php:37
+msgid "choose more author"
+msgstr "انتخاب نویسندگان بیشتر"
+
+#: includes/Admin/Taxonomy.php:38
 msgid "Edit Author"
 msgstr "ویرایش نویسنده"
 
-#: includes/Admin/Taxonomy.php:37
+#: includes/Admin/Taxonomy.php:39
 msgid "Update Author"
 msgstr "بروزرسانی نویسنده"
 
-#: includes/Admin/Taxonomy.php:38
+#: includes/Admin/Taxonomy.php:40
 msgid "Add New Author"
 msgstr "افزودن نویسنده جدید"
 
-#: includes/Admin/Taxonomy.php:39
+#: includes/Admin/Taxonomy.php:41
 msgid "New Author"
 msgstr "نویسنده جدید"
 
-#: includes/Admin/Taxonomy.php:40
+#: includes/Admin/Taxonomy.php:42
 msgid "Authors List"
 msgstr "لیست نویسندگان"
 
-#: includes/Admin/Taxonomy.php:56
+#: includes/Admin/Taxonomy.php:58
 msgid "Publisher"
 msgstr "ناشر"
 
-#: includes/Admin/Taxonomy.php:57 includes/Admin/Taxonomy.php:66
+#: includes/Admin/Taxonomy.php:59 includes/Admin/Taxonomy.php:68
 msgid "Publisher List"
 msgstr "لیست ناشرین"
 
-#: includes/Admin/Taxonomy.php:58
+#: includes/Admin/Taxonomy.php:60
 msgid "Search in Publisher"
 msgstr "جستجو در ناشرین"
 
-#: includes/Admin/Taxonomy.php:59
+#: includes/Admin/Taxonomy.php:61
 msgid "All Publisher"
 msgstr "تمامی ناشرین"
 
-#: includes/Admin/Taxonomy.php:60
+#: includes/Admin/Taxonomy.php:62
 msgid "The Publisher Parent"
 msgstr "ناشر مادر"
 
-#: includes/Admin/Taxonomy.php:61
+#: includes/Admin/Taxonomy.php:63
 msgid "Current Publisher"
 msgstr "ناشر کنونی"
 
-#: includes/Admin/Taxonomy.php:62
+#: includes/Admin/Taxonomy.php:64
 msgid "Edit Publisher"
 msgstr "ویرایش ناشر"
 
-#: includes/Admin/Taxonomy.php:63
+#: includes/Admin/Taxonomy.php:65
 msgid "Update Publisher"
 msgstr "بروز رسانی ناشر"
 
-#: includes/Admin/Taxonomy.php:64
+#: includes/Admin/Taxonomy.php:66
 msgid "Add New Publisher"
 msgstr "افزودن ناشر جدید"
 
-#: includes/Admin/Taxonomy.php:65
+#: includes/Admin/Taxonomy.php:67
 msgid "New Publisher"
 msgstr "ناشر جدید"
 
@@ -232,9 +240,6 @@ msgstr ""
 
 #~ msgid "The Author Parent"
 #~ msgstr "نویسنده مادر"
-
-#~ msgid "Current Author"
-#~ msgstr "نویسنده کنونی"
 
 #~ msgid "df"
 #~ msgstr "مهرشاد دز"
