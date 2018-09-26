@@ -58,8 +58,8 @@ class Core
 <div>
 <div class="meta-box-sortables ui-sortable">
 <form id="nds-user-list-form" method="get">
+<input type="hidden" name="post_type" value="<?php echo \WP_VERONALABS_TEST::post_type; ?>" />
 <input type="hidden" name="page" value="<?php echo $_REQUEST['page'] ?>" />
-<input type="hidden" name="post_type" value="book" />
 <?php
 $wp_list_table = new ISBN_Table();
 $wp_list_table->prepare_items();
