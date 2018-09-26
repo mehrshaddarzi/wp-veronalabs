@@ -146,6 +146,7 @@ class WP_VERONALABS_TEST
          * Create Book Post Type
          */
         add_action( 'init', [\Admin\PostType::get(), 'create_book_post_type'] );
+        add_filter( 'enter_title_here', [\Admin\PostType::get(), 'custom_enter_title'] );
 
 
         /*

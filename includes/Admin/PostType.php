@@ -119,9 +119,21 @@ class PostType
      */
     public function column_book($columns)
     {
-        $t_d = \WP_VERONALABS_TEST::text_doamin;
-        $columns['isbn'] = __("ISBN", $t_d);
+        $columns['isbn'] = __("ISBN", \WP_VERONALABS_TEST::text_doamin);
         return $columns;
+    }
+    
+    
+    /*
+     * Change Title Enter Here
+     */
+    public function custom_enter_title( $input )
+    {
+        if ( \WP_VERONALABS_TEST::post_type === get_post_type() ) {
+            return __( 'Please enter the name of the book', \WP_VERONALABS_TEST::text_doamin );
+        }
+
+        return $input;
     }
 
 }

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Wp VeronaLabs Test\n"
-"POT-Creation-Date: 2018-09-26 09:57+0330\n"
-"PO-Revision-Date: 2018-09-26 09:58+0330\n"
+"POT-Creation-Date: 2018-09-26 10:04+0330\n"
+"PO-Revision-Date: 2018-09-26 10:05+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -25,7 +25,7 @@ msgstr ""
 msgid "ISBN Per Page"
 msgstr "تعداد شابک در هر صفحه"
 
-#: includes/Admin/ISBN/Core.php:55 wp-veronalabs.php:201
+#: includes/Admin/ISBN/Core.php:55 wp-veronalabs.php:202
 msgid "ISBN List"
 msgstr "لیست شابک"
 
@@ -34,7 +34,7 @@ msgid "Search ISBN"
 msgstr "جستجو شابک"
 
 #: includes/Admin/ISBN/ISBN_Table.php:26 includes/Admin/ISBN/ISBN_Table.php:171
-#: includes/Admin/PostType.php:123 includes/Front/ShortCode.php:76
+#: includes/Admin/PostType.php:122 includes/Front/ShortCode.php:76
 msgid "ISBN"
 msgstr "شابک"
 
@@ -113,6 +113,10 @@ msgstr "کتاب پدر"
 #: includes/Admin/PostType.php:40 includes/Admin/PostType.php:44
 msgid "Books List"
 msgstr "لیست کتاب ها"
+
+#: includes/Admin/PostType.php:133
+msgid "Please enter the name of the book"
+msgstr "لطفا نام کتاب را وارد کنید"
 
 #: includes/Admin/Taxonomy.php:30
 msgid "Author Book"
