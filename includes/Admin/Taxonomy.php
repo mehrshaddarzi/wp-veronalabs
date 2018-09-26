@@ -35,6 +35,7 @@ class Taxonomy
             'parent_item_colon' => null,
             'separate_items_with_commas' => __( 'Separate Author with commas', $t_d),
             'choose_from_most_used' => __('choose more author', $t_d),
+            'add_or_remove_items' => __('Add or remove author', $t_d),
             'edit_item' => __( 'Edit Author', $t_d),
             'update_item' => __( 'Update Author', $t_d),
             'add_new_item' => __( 'Add New Author', $t_d),
