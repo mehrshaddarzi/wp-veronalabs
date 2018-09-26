@@ -31,8 +31,8 @@ class Taxonomy
             'singular_name' => __( 'Author List', $t_d),
             'search_items' => __( 'Search in Authors', $t_d),
             'all_items' => __( 'All Authors', $t_d),
-            'parent_item' => __( 'The Author Parent', $t_d),
-            'parent_item_colon' => __( 'Current Author', $t_d),
+            'parent_item' => null,
+            'parent_item_colon' => null,
             'edit_item' => __( 'Edit Author', $t_d),
             'update_item' => __( 'Update Author', $t_d),
             'add_new_item' => __( 'Add New Author', $t_d),
@@ -41,7 +41,7 @@ class Taxonomy
         );
         $args = array(
             'labels' => $labels,
-            'hierarchical' => true,
+            'hierarchical' => false, //Authors is not Parent Item
             'rewrite'   => array( 'slug' => 'authors' ),
             'query_var'    => true,
             'update_count_callback' => '_update_post_term_count',
