@@ -118,7 +118,7 @@ class ISBN_Table extends \WP_List_Table
     public function column_default( $item, $column_name ) {
         switch ( $column_name ) {
             case 'bookname':
-            case 'ISBN':
+            case 'isbn':
                 return $item[ $column_name ];
             default:
                 return print_r( $item, true ); //Show the whole array for troubleshooting purposes
