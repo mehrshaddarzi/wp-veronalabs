@@ -90,8 +90,7 @@ class WP_VERONALABS_TEST
         /*
          * Set Text Domain
          */
-
-        $this->load_language(self::text_doamin);
+         $this->load_language(self::text_doamin);
 
         /*
          * PSR Autoload
