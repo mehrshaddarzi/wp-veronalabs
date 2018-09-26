@@ -119,7 +119,24 @@ class PostType
      */
     public function column_book($columns)
     {
+        /*
+         * Add isbn column
+         */
         $columns['isbn'] = __("ISBN", \WP_VERONALABS_TEST::text_doamin);
+
+        /*
+         * change Title and Author
+         */
+        foreach($columns as $key => $value)
+        {
+            if($key =="title") {
+                $columns[$key] = __("Book Name", \WP_VERONALABS_TEST::text_doamin);
+            }
+            if($key =="author") {
+                $columns[$key] = __("author post", \WP_VERONALABS_TEST::text_doamin);
+            }
+        }
+
         return $columns;
     }
     
