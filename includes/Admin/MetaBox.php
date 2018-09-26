@@ -21,7 +21,7 @@ class MetaBox
     public function Create_Meta_box()
     {
         $t_d = \WP_VERONALABS_TEST::text_doamin;
-        add_meta_box('veronalabs_test_metabox_isb', __('ISBN Book', $t_d), [$this , 'isbn_metabox'], 'book', 'normal', 'high');
+        add_meta_box('veronalabs_test_metabox_isb', __('ISBN Book', $t_d), [$this , 'isbn_metabox'], \WP_VERONALABS_TEST::post_type, 'normal', 'high');
     }
 
 
@@ -107,7 +107,7 @@ class MetaBox
     public function Remove_ISBN_Row( $postid  )
     {
         global $wpdb, $post_type;
-        if ( $post_type == 'book' ) {
+        if ( $post_type == \WP_VERONALABS_TEST::post_type ) {
             $wpdb->query($wpdb->prepare("DELETE FROM {$wpdb->prefix}books_info WHERE post_id = %d", $postid));
         }
     }

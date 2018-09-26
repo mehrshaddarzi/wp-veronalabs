@@ -104,8 +104,7 @@ class ISBN_Table extends \WP_List_Table
 
     /** Text displayed when no customer data is available */
     public function no_items() {
-        $t_b = \WP_VERONALABS_TEST::text_doamin;
-        _e( 'No ISBN avaliable', $t_b );
+        echo __( 'no isbn available', \WP_VERONALABS_TEST::text_doamin );
     }
 
     /**

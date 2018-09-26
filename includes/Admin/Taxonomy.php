@@ -46,7 +46,7 @@ class Taxonomy
             'query_var'    => true,
             'update_count_callback' => '_update_post_term_count',
         );
-        register_taxonomy( 'authors', 'book', $args );
+        register_taxonomy( 'authors', \WP_VERONALABS_TEST::post_type, $args );
 
 
         /*
@@ -72,7 +72,7 @@ class Taxonomy
             'query_var'    => true,
             'update_count_callback' => '_update_post_term_count',
         );
-        register_taxonomy( 'Publisher', 'book', $args );
+        register_taxonomy( 'Publisher', \WP_VERONALABS_TEST::post_type, $args );
 
     }
 

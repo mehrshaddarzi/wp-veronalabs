@@ -62,14 +62,14 @@ class PostType
             'supports' => array( 'title', 'editor', 'thumbnail', 'author'),
 
             /* Rewrite */
-            'rewrite'  => array( 'slug' => 'book' ),
+            'rewrite'  => array( 'slug' => \WP_VERONALABS_TEST::post_type ),
 
             /* Rest Api */
             'show_in_rest'       => true,
             'rest_base'          => 'books_api',
             'rest_controller_class' => 'WP_REST_Posts_Controller',
         );
-        register_post_type( 'book', $args );
+        register_post_type( \WP_VERONALABS_TEST::post_type, $args );
 
         
     }

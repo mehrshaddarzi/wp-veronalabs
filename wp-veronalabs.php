@@ -55,6 +55,12 @@ class WP_VERONALABS_TEST
      */
     const text_doamin = 'wp-veronalabs';
 
+    /*
+     * Post Type Book Slug
+     * @type string
+     */
+    const post_type = 'book';
+
     /**
      * Access this plugin’s working instance
      *
@@ -152,7 +158,7 @@ class WP_VERONALABS_TEST
          * New MetaBox For Book PostType
          */
         add_action( 'add_meta_boxes', [\Admin\MetaBox::get(), 'Create_Meta_box'] );
-        add_action( 'save_post_book', [\Admin\MetaBox::get(), 'Save_MetaBox'] , 10, 2 );
+        add_action( 'save_post_'.\WP_VERONALABS_TEST::post_type, [\Admin\MetaBox::get(), 'Save_MetaBox'] , 10, 2 );
 
 
         /*
@@ -164,7 +170,7 @@ class WP_VERONALABS_TEST
          * Add Column Book PosType Table
          */
         add_action( 'manage_posts_custom_column' , [\Admin\PostType::get(), 'column_post_table'] , 10, 2 );
-        add_filter('manage_book_posts_columns' , [\Admin\PostType::get(), 'column_book']);
+        add_filter('manage_'.\WP_VERONALABS_TEST::post_type.'_posts_columns' , [\Admin\PostType::get(), 'column_book']);
 
 
         /*
@@ -180,7 +186,7 @@ class WP_VERONALABS_TEST
         /*
          * Set Screen Option
          */
-        if( $pagenow =="edit.php" and $_GET['post_type'] =="book" and $_GET['page'] =="isbn_book") {
+        if( $pagenow =="edit.php" and $_GET['post_type'] ==\WP_VERONALABS_TEST::post_type and $_GET['page'] =="isbn_book") {
             add_filter('set-screen-option', [Admin\ISBN\Core::get(), 'Set_Screen_option'], 10, 3);
         }
 
@@ -192,7 +198,7 @@ class WP_VERONALABS_TEST
      */
     public function add_submenu_isbn()
     {
-        $hook = add_submenu_page( 'edit.php?post_type=book',__("ISBN List", self::text_doamin),__("ISBN List", self::text_doamin),'manage_options', 'isbn_book' ,[Admin\ISBN\Core::get(), 'ShowPage_ISBN']);
+        $hook = add_submenu_page( 'edit.php?post_type='.\WP_VERONALABS_TEST::post_type,__("ISBN List", self::text_doamin),__("ISBN List", self::text_doamin),'manage_options', 'isbn_book' ,[Admin\ISBN\Core::get(), 'ShowPage_ISBN']);
         add_action( "load-$hook", [Admin\ISBN\Core::get(), 'Screen_option'] );
     }
 
