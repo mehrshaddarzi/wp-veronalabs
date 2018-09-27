@@ -66,6 +66,13 @@ class MetaBox
             return $post_id;
         }
 
+	/*
+       * verify if this is an auto save routine. 
+       */
+        if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ) {
+            return $post_id;
+        }
+
 
         /*
          * check Isset Post Requet
