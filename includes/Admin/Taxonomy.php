@@ -49,6 +49,8 @@ class Taxonomy
             'query_var'    => true,
             'show_ui'               => true,
             'show_admin_column'     => true,
+           // 'show_in_quick_edit'         => false, Not Show in Qick Edit
+            //'meta_box_cb'                => false, Not Show in Post Add MetaBox
             'update_count_callback' => '_update_post_term_count',
         );
         register_taxonomy( 'authors', \WP_VERONALABS_TEST::post_type, $args );
