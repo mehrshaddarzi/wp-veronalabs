@@ -87,7 +87,7 @@ class PSR4_WordPress_Plugin
      */
     public function load_language($domain)
     {
-        load_plugin_textdomain($domain, FALSE, $this->plugin_path . '/languages');
+        load_plugin_textdomain( $domain, false, basename( dirname( __FILE__ ) ) . '/languages' );
     }
 
     /**
